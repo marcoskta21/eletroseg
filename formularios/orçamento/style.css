@@ -8,11 +8,20 @@ body{
 	height: 100%;
 	width: 100%;
 	background-image: url("images/background-main.jpg");
+	font-family: Arial,sans-serif;
+}
+
+#footerTotal{
+	position: relative;
+	top: 45%;
+	left: 77%;
+	font-weight: bold;
+
 }
 
 main{
 	border-style: solid;
-	border-color: white;
+	border-color: red;
 	border-width: 0;
 	height: 100vh;
 	width: 100%;
@@ -440,5 +449,10 @@ input.noBorder{
 	}
 	#border{
 		border:none;
+	}
+	#face{display: none;}
+	#footerTotal{
+		top: 25%;
+		left: 45%;
 	}
 }
