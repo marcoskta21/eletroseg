@@ -18,15 +18,26 @@ main{
 	width: 100%;
 }
 #header{
+	position: relative;
 	width: 100%;
 	height: 18%;
-	max-height: 18%;
-	margin-left: auto;
-	margin-right: auto; 
+	
+	/*margin-left: auto;
+	margin-right: auto; */
 	background-color: white;
 	box-shadow: 3px 1px 300px white;
 	border-radius: 10px;
 	opacity: 0.95;
+}
+img{
+
+	max-width: 100%;
+	width: 35%;
+	max-height: 85%;
+	display:block;
+	margin-left: auto;
+	margin-right: auto;
+	padding-top: 10px;
 }
 h3{
 	
@@ -37,16 +48,6 @@ h3{
 	border-width: 1px;
 	width: 98%;
 	left: 10px;
-}
-img{
-
-	max-width: 100%;
-	width: 300px;
-	max-height: 100%;
-	display:block;
-	margin-left: auto;
-	margin-right: auto;
-	padding-top: 10px;
 }
 #table-cliente{
 	position: relative;
@@ -186,7 +187,7 @@ input.noBorder{
 	font-size: 55px;
 	margin: 0 0 0 0;
 }
-.contato{
+.contato, #instagram{
 	width: 38%;
 	top: 2%;
 	position: relative;
@@ -285,4 +286,159 @@ input.noBorder{
 	width: 5%;
 	text-align: center;
 	font-size: 12px;
+}
+
+
+@media (max-width: 400px){
+
+	#header{
+		width: 100%;
+		height: 20%;
+		background-color: white;
+		border-radius: 0;
+	}
+	#table-cliente{
+		position: relative;
+		left: 0;
+		width: 90%;
+		border:solid 1px;
+	}
+
+	#table-cliente input{
+		width: 97%;
+	}
+	#info{
+	position: relative;
+	font-size: 15px;
+	width: 90%;
+	top: 10%;
+	left: 0%;
+	}
+
+	#button{
+		position: absolute;
+		left: 0;
+		width:100%;
+		
+	}
+	button{
+		width: 30%;
+		font-size: 10px;
+		
+	}
+	#table{
+		position: relative;
+		top: 50%;
+		color: red;
+		width: 90%;
+		height: 30px;
+	}
+	#table input{
+		width: 80%;
+	}
+	#orcamento{
+		position: relative;
+		top:500px;
+		width: 100%;
+		height: 1350px;
+	}
+	#cabecalho{
+		position: relative;
+		top: 1%;
+		width: 95%;
+		height: 10%;
+	}
+
+	#orcamento .contato,#email, #cnpj,#instagram{
+		font-size: 9px;
+		width: 40%;
+		/*border:solid 1px;*/
+
+	}
+	.contato{
+		top: 20%;
+		position: relative;
+		left: 40%;
+
+	}
+	#cnpj{
+		position: absolute;
+		left: 1%;
+		top: 80%;
+	}
+	#instagram{
+		font-size: 9px;
+		font-weight: bold;
+		position: absolute;
+		top: 60%;
+		left: 1%;
+		width: 35%;
+		height: 10%;
+		/*border:solid;*/
+	}
+	#email{
+		position: absolute;
+		width: 45%;
+		left: 40%;
+		top: 80%;
+		/*border-style: solid;*/
+		/*border-width: 1px;*/
+	}
+	#data{
+		position: absolute;
+		top: 0%;
+		left: 78%;
+		font-size: 8px;
+		width: 20%;
+		/*border:solid 1px;*/
+	}
+	#tel{
+		position: relative;
+		top: 30%;
+		margin-bottom: 5%;
+	}
+	
+	#eletro{
+		position: absolute;
+		top: 0;
+		font-size: 2em;
+	}
+	#seg{
+		position: absolute;
+		left: 8%;
+		top: 29%;
+		font-size: 1.5em;
+		width: 23%;
+	}
+	#title{
+		position: relative;
+		top: 1%;
+		font-size: 1.5em;
+	}
+	#subtitle{
+		font-size: 1em;
+		position: relative;
+		top: 2%;
+		left: 7%;
+		width: 70%;
+	}
+	#nome-cliente{
+		font-size: 0.8em;
+		position: relative;
+		top: 2%;
+		left: 7%;
+	}
+	#area-itens{
+		position: absolute;
+		top: 23%;
+	}
+	#footer{
+		position: absolute;
+		top: 50%;
+		width: 100%;
+		font-size: 0.9em;
+	}
+	#border{
+		border:none;
+	}
 }
