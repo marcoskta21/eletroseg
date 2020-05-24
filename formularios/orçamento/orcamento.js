@@ -116,15 +116,18 @@ function adicionarLinha() {
   i = i + 1;
 }
 
+var somaTotal = 0;
 function calculaValor(numero){	
 	var resultado = document.getElementById("quantidade-item" + numero).value * document.getElementById("preco-item" + numero).value;
-	insereValor(resultado, numero);
+	
+	somaTotal = somaTotal+resultado;
+	insereValor(resultado, numero,somaTotal);
 }
 
-function insereValor(resultado, k){
+function insereValor(resultado, k,somaTotal){
 	document.getElementById("final-item" + k).innerHTML = "R$ " + resultado + ",00";
+	document.getElementById("footerTotal").innerHTML = "Valor total: R$ " + somaTotal + ",00";
 }
-
 
 var str;
 function elementoFocado(){
