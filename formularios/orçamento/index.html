@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+
+<head>
+	<meta charset="utf-8">
+		<title>EletroSeg - ORÇAMENTOS</title>
+		
+		<link rel="stylesheet" type="text/css" href="style.css" media="screen" />
+		<script type="text/javascript" src="orcamento.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/0.4.1/html2canvas.min.js"></script>
+		<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.1.62/pdfmake.min.js"></script>
+		<!-- <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/1.5.3/jspdf.min.js"></script> -->
+</head>
+
+<body id="body">
+	<main>
+		<div id=header><img src="images/capa.png"></div>
+		<div id="formulario">
+			<table id="table-cliente">
+				<thead>
+					<tr>	
+						<th class="head-client">NOME DO CLIENTE</th>
+						<th class="head-client">DATA (ex:24/04/2020)</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<td><input type="text" name="cliente" id="cliente"/></td>
+						<td><input type="text" name="data" id="dia"></td>
+					</tr>
+				</tbody>
+			</table>
+			<h3 id="info">&nbsp;PREENCHA COM OS DADOS DO PRODUTO:</h3>
+			<h1 id="contador"></h1>
+			<table id="table">
+				<thead>
+					<tr>
+						<th class="th">DESCRIÇÃO</th>
+						<th class="th">QUANTIDADE</th>
+						<th class="th">PREÇO UNITÁRIO</th>
+						<th class="th">PREÇO FINAL</th>
+					</tr>
+				</thead>
+				<tbody id="tbody" class="tbody-input">
+						
+						<tr id="line">
+							<td class="td"><input type="text" class="noBorder" name="decricao-item" id="descricao-item0"/></td>
+							<td class="td"><input type="text"  class="noBorder" name="quantidade-item" id="quantidade-item0"/></td>
+							<td class="td"><input type="text"  class="noBorder" name="preco-item" id="preco-item0" onfocus="elementoFocado()" onblur="pegaSubSTR()"  /></td>
+							<td class="td" id="final-item0"></td>
+
+						</tr>
+						<!-- <tr id="line2"></tr> -->
+					
+				</tbody>	
+
+
+			</table>
+	    		
+	    	<div id="button">
+		    	<button onclick="adicionarLinha()">+ ITEM</button>
+		    	<button onclick="verificaClonarLinha()">FECHAR ORÇAMENTO</button>
+		    	<button onclick="html2pdf()">PDF</button>
+		    	<!-- <button onclick="jspdf2()">PDF 2</button> -->
+	    	</div>		
+
+		</div>
+
+	</main>
+	<div id="orcamento">
+		<div id="border">
+			
+			<div id="cabecalho">
+				<!-- <img id ="img-cabecalho" src="images/logo.jpg"> -->
+				<h2 class="logo" id="eletro">ELETRO</h2>
+				<h2 class="logo" id="seg">S E G</h2>
+				<p class="contato">Tel: (84) 99660-5753 </p>
+				<P class="contato">Whatsapp: (84) 98777-6981</p>
+				<p class="contato">Instagram: @eletrosegof</p>
+				<p class="contato" id="face">Facebook: www.facebook/eletrosegof</p>
+				<p class="" id="data">DATA DE EMISSÃO: 00/00/2020</p>
+				<p  id="cnpj">CNPJ: 26.734.420/0001-95</p>
+				<p id="email">Email: wo.lopes62@gmail.com</p>
+			</div>
+			<h1 id="title">ORÇAMENTO</h1>
+			<p class="dados" id="nome-cliente">CLIENTE:</p>
+			<h2 id="subtitle">PRODUTO/SERVIÇO</h2>
+			<table id="area-itens">
+				<thead class="container">
+					<tr>
+						<th class="head" id="head-name">DESCRIÇÃO</th>
+						<th class="head" id="head-qtd">QUANTIDADE</th>
+						<th class="head" id="head-price">PREÇO UNITÁRIO</th>
+						<th class="head" id="head-final">TOTAL</th>
+					</tr>
+				</thead>
+				<tbody id="itens-rows">
+						
+						<tr class="container-item" id="item0">
+							<td class="item" id="name0">**NAME**</td>
+							<td class="item" id="qtd0">**QTD**</td>
+							<td class="item" id="price0">**PRICE**</td>
+							<td class="item" id="final0">**FINAL**</td>
+
+						</tr>
+						<!-- <tr id="line2"></tr> -->
+					
+				</tbody>	
+
+
+			</table>
+			
+			<p id="footer">Obs: Valor total já inclusa a mão de obra</p>
+		</div>
+	</div>
+
+<script type="text/javascript" src="orcamento.js"></script>
+
+
+</body>
+
+
+

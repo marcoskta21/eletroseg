@@ -1,0 +1,1 @@
+https://stackoverflow.com/questions/34049956/generate-pdf-from-html-using-pdfmake-in-angularjs

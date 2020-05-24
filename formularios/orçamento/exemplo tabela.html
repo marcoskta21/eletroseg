@@ -1,0 +1,107 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Formulário</title>
+
+<script type="text/javascript" src="funcoes.js"></script>
+
+
+
+</head>
+
+<BODY scroll=yes>
+<span class="NumSecao">
+<strong>&nbsp;Preencha o Formulário</strong></span>
+<HR>
+<br>
+    <style>    
+        table,th,td
+        {
+            border:1px solid #D9D9F3;;
+            border-collapse:collapse;
+            font-family: Arial,sans-serif;
+            font-size: 12px;
+
+            }
+        input.noBorder{ border:0px solid transparent; padding: 3px;}
+        input.noBorder:FOCUS{ background-color: #C0D9D9;}
+
+
+    </style>
+    <form>
+    <table id="table"> 
+
+
+        <thead>
+            <tr>
+                <th>Empresa/Parceiro</th>
+                <th>Cliente/Fornecedor</th>
+                <th>Natureza</th>
+                <th>Contato</th>
+                <th>Telefone</th>
+                <th>E-Mail</th>
+                <th>Cliente Atendido</th>
+                <th>Taxa Hora</th>
+                <th>% GP</th>
+                <th>Taxa GP</th>
+                <th>Tipo de Despesa</th>
+                <th>Valor Despesa Calculado</th>
+                <th>Observações</th>
+                <th>ND OU NF?</th>
+
+            </tr>
+        </thead>
+
+            <tbody>
+
+                <tr class>
+
+                <td><input type="text" class="noBorder" name="cod_empresa" id="cod_empresa"/></td>
+                <td><input type="text" class="noBorder" name="cod_cliente" id="cod_cliente"/></td>
+                <td><input type="text" class="noBorder" name="cod_natureza" id="cod_natureza" /></td>
+                <td><input type="text" class="noBorder" name="cod_contato" id="cod_contato" /></td>
+                <td><input type="text" class="noBorder" name="cod_telefone" id="cod_telefone" /></td>
+                <td><input type="text" class="noBorder" name="cod_email" id="cod_email" /></td>
+                <td><input type="text" class="noBorder" name="cod_clienteatendido" id="cod_clienteatendido" /></td>
+                <td><input type="text" class="noBorder" name="cod_txhora" id="cod_txhora" /></td>
+                <td><input type="text" class="noBorder" name="cod_porcentagemgp" id="cod_porcentagemgp" /></td>
+                <td><input type="text" class="noBorder" name="cod_txgp" id="cod_txgp" /></td>
+                <td><input type="text" class="noBorder" name="cod_tipodespesa" id="cod_tipodespesa" /></td>
+                <td><input type="text" class="noBorder" name="cod_vldespesa" id="cod_vldespesa" /></td>
+                <td><input type="text" class="noBorder" name="cod_observacoes" id="cod_observacoes" /></td>
+                <td><input type="text" class="noBorder" name="cod_ndnf" id="cod_ndnf" /></td>
+
+
+                </tr>
+
+
+                    </tbody>
+
+                </table>
+
+
+                     <button id="adicionar" type="button" onclick="adicionarLinha()"> Adicionar </button> 
+			<button id="salvar" type="button" onclick="salvarDados()"> Salvar </button>              
+            </form>            
+
+  <script>
+            /* Funcao responsavel por replicar as linhas da tabela */
+    function adicionarLinha(){
+        var row = document.getElementsByTagName("tbody");
+  var table = document.getElementById("table");
+  var clone = row[0].cloneNode(true);
+  clone.id = "linhaClonada";
+  table.appendChild(clone);
+    }
+
+
+	
+
+
+ </script>
+
+
+</body>
+</html>
